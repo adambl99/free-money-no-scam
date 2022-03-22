@@ -11,9 +11,16 @@
             <h1>🤑 Free moneyy no scam - very easy</h1>
             <form method="POST" action="/test">
                 <label for="email">🥳 Please enter your e-mail</label>
-                <input id="email" type="text" name="email"/>
-                <input type="submit">
+                <input id="email" type="text"  placeholder="Type in your email here" name="email"/>
+                <input type="submit" onclick="myFunction()">
             </form>
     </section>
+<script>
+    function myFunction(){
+
+        return confirm('Is your email ' + document.getElementById("email").value)
+
+    }
+</script>
 </body>
 </html>
