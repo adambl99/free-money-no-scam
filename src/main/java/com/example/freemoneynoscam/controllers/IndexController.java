@@ -1,5 +1,6 @@
 package com.example.freemoneynoscam.controllers;
 
+import com.example.freemoneynoscam.services.EmailRepository;
 import com.example.freemoneynoscam.services.ValidateEmailService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,6 +73,9 @@ public class IndexController {
         System.out.println("URL: " + url);
         System.out.println("Vi har en connection");
     }
+
+
+
 }
 
 
