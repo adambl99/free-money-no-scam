@@ -11,6 +11,7 @@ public class EmailController {
     public String emailList(Model model) {
         model.addAttribute("mail", EmailRepository.fetchSingleEmail());
         model.addAttribute("mails", EmailRepository.fetch4Emails());
+        model.addAttribute("allMails", EmailRepository.fetchAllEmails());
         return "email_list";
     }
 

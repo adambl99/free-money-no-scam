@@ -55,6 +55,29 @@ public class EmailRepository {
         }
         return emails;
     }
+    public static ArrayList<String> fetchAllEmails() {
+        ArrayList<String> emails = new ArrayList<String>();
+
+
+        try {
+            connect();
+            stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
+            sqlString = "SELECT * FROM emails";
+            rs = stmt.executeQuery(sqlString);
+
+            System.out.println("Displaying one fetched email:");
+            while (rs.next()) {
+                String col2 = rs.getString("emails");
+                emails.add(col2);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Der skete en fejl");
+            System.out.println(e);
+        }
+        return emails;
+    }
     public static void connect() {
         String url = "jdbc:mysql://localhost:3306/free_money";
 
