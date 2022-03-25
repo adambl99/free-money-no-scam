@@ -66,7 +66,6 @@ public class EmailRepository {
             sqlString = "SELECT * FROM emails";
             rs = stmt.executeQuery(sqlString);
 
-            System.out.println("Displaying one fetched email:");
             while (rs.next()) {
                 String col2 = rs.getString("emails");
                 emails.add(col2);
